@@ -37,20 +37,6 @@ class Product02 {
 const item05 = new Product02('商品名','価格','カテゴリ');
 console.log(item05.name);
 
-
-
-console.log('---「組み込みクラス」の拡張----------------------------');
-Date.prototype.sayHello = function() {
-    return 'おはよう　今は ' + this.getFullYear() + '年です。';
-};
-const date01 = new Date();
-
-console.log(date01.sayHello());
-
-console.log(Date.prototype);
-
-
-
 console.log('---クラス メソッド追加----------------------------');
 // 消費税率
 const tax = 1.10;
@@ -92,3 +78,16 @@ const item07 = new Product03(item[1]);
 item07.showText();
 const item08 = new Product03(item[2]);
 item08.showText();
+
+
+
+
+console.log('---「組み込みクラス」の拡張----------------------------');
+Date.prototype.sayHello = function() {
+    return 'おはよう　今は ' + this.getFullYear() + '年です。';
+};
+const date01 = new Date();
+
+console.log(date01.sayHello());
+
+console.log(Date.prototype);
