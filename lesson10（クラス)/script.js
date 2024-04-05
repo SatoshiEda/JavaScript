@@ -39,6 +39,18 @@ console.log(item05.name);
 
 
 
+console.log('---「組み込みクラス」の拡張----------------------------');
+Date.prototype.sayHello = function() {
+    return 'おはよう　今は ' + this.getFullYear() + '年です。';
+};
+const date01 = new Date();
+
+console.log(date01.sayHello());
+
+console.log(Date.prototype);
+
+
+
 console.log('---クラス メソッド追加----------------------------');
 // 消費税率
 const tax = 1.10;
