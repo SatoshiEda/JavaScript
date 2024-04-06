@@ -38,7 +38,42 @@ addBtn.addEventListener('click', () => {
 
 console.log('---マウスオーバーイベント------');
 const hover_area = document.getElementById('hover');
-
+let flg = true;
 hover_area.addEventListener('mouseover', () => {
-    alert('マウスオーバーされました！');
+    if(flg) {
+        alert('マウスオーバーされました！（1回目のみ出力制御）');
+        flg = false;
+    }
+});
+
+
+console.log('---文字数カウントイベント------');
+// textareaというidを持つHTML要素を取得し、定数に代入する
+const textarea = document.getElementById('textarea');
+
+// HTML要素内でキーが押下されたときにイベント処理を実行する
+textarea.addEventListener('keyup', () => {
+    // テキストボックスに入力された文字列を取得する
+    const text = document.forms.textForm.textBox.value;
+    // 取得した文字列の文字数を出力する
+    document.getElementById('count').innerText = '文字数：' + text.length + '文字';
+});
+
+
+
+console.log('---表示非表示イベント------');
+// ボタン
+const openCloseBtn = document.getElementById('openCloseBtn');
+// エリア
+const openCloseArea = document.getElementById('openCloseArea');
+openCloseBtn.addEventListener('click', () => {
+
+    if(openCloseArea.style.display === 'none' ){
+        openCloseArea.style.display = 'block';
+        openCloseBtn.innerText = '非表示にする';
+    }
+    else{
+        openCloseArea.style.display = 'none';
+        openCloseBtn.innerText = '表示する';
+    }
 });
