@@ -51,7 +51,7 @@ console.log('---文字数カウントイベント------');
 // textareaというidを持つHTML要素を取得し、定数に代入する
 const textarea = document.getElementById('textarea');
 
-// HTML要素内でキーが押下されたときにイベント処理を実行する
+// HTML要素内でキーが押下（押下されたキーが戻ったタイミング）されたときにイベント処理を実行する
 textarea.addEventListener('keyup', () => {
     // テキストボックスに入力された文字列を取得する
     const text = document.forms.textForm.textBox.value;
@@ -67,13 +67,16 @@ const openCloseBtn = document.getElementById('openCloseBtn');
 // エリア
 const openCloseArea = document.getElementById('openCloseArea');
 openCloseBtn.addEventListener('click', () => {
-
+    // displayがnoneの場合
     if(openCloseArea.style.display === 'none' ){
         openCloseArea.style.display = 'block';
+        // ボタンの文字列を変更する
         openCloseBtn.innerText = '非表示にする';
     }
+    // displayがnone以外の場合
     else{
         openCloseArea.style.display = 'none';
+        // ボタンの文字列を変更する
         openCloseBtn.innerText = '表示する';
     }
 });
