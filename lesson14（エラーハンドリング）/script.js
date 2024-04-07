@@ -54,12 +54,15 @@ console.log('---throw文で任意にエラーを出す--------------------------
 //
 function myFunctionThrow(x){
     if( x === 0 ) {
+        // 本来は任意の処理を記載し処理させるが、throwを利用して任意にエラーを出す
         throw new Error("「throw」Errorを利用しエラーを意図的に発生");
     }
     else if( x === 1 ) {
+        // 本来は任意の処理を記載し処理させるが、throwを利用して任意にエラーを出す
         throw new TypeError("「throw」TypeErrorを利用しエラーを意図的に発生");
     }
     else if( x === 2 ){
+        // 本来は任意の処理を記載し処理させるが、throwを利用して任意にエラーを出す
         throw new RangeError("「throw」RangeErrorを利用しエラーを意図的に発生");
     }
     else {
@@ -68,7 +71,7 @@ function myFunctionThrow(x){
 }
 
 // myFunctionThrowの引数を変更して確認
-// x = 0 :throw new Error
+// x = 0 :throw new Error（カリキュラムに記載されているもの）
 // x = 1 :throw new TypeError
 // x = 2 :throw new RangeError
 // x = 3以上：成功
