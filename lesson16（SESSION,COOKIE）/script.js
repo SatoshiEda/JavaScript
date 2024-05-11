@@ -1,10 +1,6 @@
 console.log('---関数-----------------------------------');
 
 console.log('---1500円以上で送料無料の関数を作成------');
-
-const test = function(){
-
-}
 const calculateTotal = (price) => {
     let str;
     let shippingPrice = 850;
@@ -28,7 +24,7 @@ console.log('---1200円の場合の支払い金額------------------------------
 console.log(calculateTotal02(1200));
 console.log('---1500円の場合の支払い金額-----------------------------------');
 console.log(calculateTotal02(1500));
-function calculateTotal02(price,tax,shipping){
+function calculateTotal02(price){
     let str;
     let shippingPrice = 850;
     if(price >= 1500){
@@ -40,4 +36,3 @@ function calculateTotal02(price,tax,shipping){
 
     return str;
 }
-
